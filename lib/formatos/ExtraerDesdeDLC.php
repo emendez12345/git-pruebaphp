@@ -13,6 +13,7 @@ class ExtraerDesdeDLC extends Extractor{
 
     protected function getNombreCancion()
     {
+        return $this->extraerCancionDLC();
         // TODO: Implement getNombreCancion() method.
     }
 
