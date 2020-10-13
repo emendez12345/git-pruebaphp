@@ -1,11 +1,13 @@
 <?php
 include_once("ExtraerNombreArtista.php");
 include_once("ExtraerCancion.php");
+include_once("ExtraerLetra.php");
 
 abstract class Extractor
 {
     use ExtraerNombreArtista;
     use ExtraerCancion;
+    use ExtraerLetra;
 
 
     protected $url;
@@ -58,6 +60,7 @@ abstract class Extractor
         $data = [
             'artista'=>$this->getNombreArtista(),
             'cancion'=>$this->getNombreCancion(),
+            'letra'=>$this->getLetra(),
           //  'Letra'=>"Tu vas a orar por mi \n\n O vas a hablar de mi \n \n Tu vas a orar por mi...",
           //  'youtube'=>'https://www.youtube.com/watch?v=WgleotOiJ4c'
         ];

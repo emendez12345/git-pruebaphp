@@ -19,6 +19,7 @@ class ExtraerDesdeDLC extends Extractor{
 
     protected function getLetra()
     {
+        return $this->extraerLetraDLC();
         // TODO: Implement getLetra() method.
     }
 
